@@ -1,13 +1,16 @@
 import App from "@/App"
-import Signup from "@/pages/SignIn"
+import Home from "@/pages/Home"
+import SignIn from "@/pages/SignIn"
+import SignUp from "@/pages/SignUp"
 import { Route, Routes } from "react-router"
 
 const AppRoutes = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/signup" element={<Signup />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/signup" element={<SignUp />} />
     </Routes>
   )
 }

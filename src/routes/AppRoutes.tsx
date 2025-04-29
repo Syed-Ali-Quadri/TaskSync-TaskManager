@@ -1,5 +1,5 @@
 import App from "@/App"
-import Login from "@/pages/Login"
+import Signup from "@/pages/SignIn"
 import { Route, Routes } from "react-router"
 
 const AppRoutes = () => {
@@ -7,7 +7,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
     </Routes>
   )
 }

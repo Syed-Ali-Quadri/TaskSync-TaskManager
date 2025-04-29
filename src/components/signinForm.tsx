@@ -134,7 +134,7 @@ export function SignInForm() {
 				<p className="text-sm text-muted-foreground">
 					Don't have an account?{" "}
 					<a
-						href="#"
+						href="/signup"
 						className="text-primary underline-offset-4 hover:underline"
 					>
 						Sign up

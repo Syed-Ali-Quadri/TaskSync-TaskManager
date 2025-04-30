@@ -54,7 +54,7 @@ const formSchema = z.object({
 	dueDate: z.date({ required_error: "Please select a due date" })
 });
 
-export function CreateTask() {
+export function CreateTaskForm() {
 	const [isLoading, setIsLoading] = useState(false);
 
 	const form = useForm<z.infer<typeof formSchema>>({

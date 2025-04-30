@@ -48,6 +48,7 @@ export function SignupForm() {
 		setTimeout(() => {
 			console.log(values);
 			setIsLoading(false);
+			form.reset();
 		}, 1000);
 	}
 
@@ -112,7 +113,7 @@ export function SignupForm() {
 						/>
 						<Button
 							type="submit"
-							className="w-full mt-2"
+							className="w-full mt-2 cursor-pointer"
 							disabled={isLoading}
 						>
 							{isLoading

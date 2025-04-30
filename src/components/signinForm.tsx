@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -23,12 +21,10 @@ import {
 	FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
 
 const formSchema = z.object({
 	email: z.string().email({ message: "Please enter a valid email address" }),
-	password: z.string().min(1, { message: "Password is required" }),
-	rememberMe: z.boolean().optional()
+	password: z.string().min(1, { message: "Password is required" })
 });
 
 export function SignInForm() {
@@ -38,8 +34,7 @@ export function SignInForm() {
 		resolver: zodResolver(formSchema),
 		defaultValues: {
 			email: "",
-			password: "",
-			rememberMe: false
+			password: ""
 		}
 	});
 
@@ -49,6 +44,7 @@ export function SignInForm() {
 		setTimeout(() => {
 			console.log(values);
 			setIsLoading(false);
+			form.reset();
 		}, 1000);
 	}
 
@@ -87,42 +83,15 @@ export function SignInForm() {
 							name="password"
 							render={({ field }) =>
 								<FormItem>
-									<div className="flex items-center justify-between">
-										<FormLabel>Password</FormLabel>
-										<a
-											href="#"
-											className="text-sm text-primary hover:underline"
-										>
-											Forgot password?
-										</a>
-									</div>
 									<FormControl>
 										<Input type="password" {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>}
-						/>
-						<div className="flex items-center space-x-2">
-							<FormField
-								control={form.control}
-								name="rememberMe"
-								render={({ field }) =>
-									<FormItem className="flex flex-row items-center space-x-2 space-y-0">
-										<FormControl>
-											<Checkbox
-												checked={field.value}
-												onCheckedChange={field.onChange}
-											/>
-										</FormControl>
-										<FormLabel className="text-sm font-normal">
-											Remember me
-										</FormLabel>
-									</FormItem>}
-							/>
-						</div>
+						/>	
 						<Button
 							type="submit"
-							className="w-full mt-2"
+							className="w-full mt-2 cursor-pointer"
 							disabled={isLoading}
 						>
 							{isLoading ? "Signing in..." : "Sign in"}

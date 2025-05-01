@@ -6,8 +6,7 @@ import {
 	Users,
 	Calendar,
 	BarChart2,
-	Smartphone,
-	ArrowRight
+	Smartphone
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -130,7 +129,7 @@ export default function Home() {
 								<p className="text-gray-500">
 									Share tasks, assign responsibilities, and
 									communicate with your team in real-time.
-								</p>
+								</p>	
 							</CardContent>
 						</Card>
 						<Card className="border-0 shadow-sm">
@@ -242,15 +241,12 @@ export default function Home() {
 					</div>
 					<div className="mt-12">
 						<Tabs defaultValue="dashboard" className="w-full">
-							<TabsList className="grid w-full grid-cols-3 mb-8">
+							<TabsList className="grid w-full grid-cols-2 mb-8">
 								<TabsTrigger value="dashboard">
 									Dashboard
 								</TabsTrigger>
 								<TabsTrigger value="tasks">
 									Task Management
-								</TabsTrigger>
-								<TabsTrigger value="calendar">
-									Calendar View
 								</TabsTrigger>
 							</TabsList>
 							<TabsContent
@@ -273,18 +269,6 @@ export default function Home() {
 									<img
 										src="/placeholder.svg?height=500&width=800"
 										alt="TaskSync Task Management"
-										className="object-contain rounded-lg border shadow-lg"
-									/>
-								</div>
-							</TabsContent>
-							<TabsContent
-								value="calendar"
-								className="flex justify-center"
-							>
-								<div className="relative w-full max-w-3xl h-[400px] md:h-[500px]">
-									<img
-										src="/placeholder.svg?height=500&width=800"
-										alt="TaskSync Calendar View"
 										className="object-contain rounded-lg border shadow-lg"
 									/>
 								</div>
@@ -379,157 +363,6 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Pricing Section */}
-			<section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-				<div className="container px-4 md:px-6">
-					<div className="flex flex-col items-center justify-center space-y-4 text-center">
-						<div className="space-y-2">
-							<div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm">
-								Pricing
-							</div>
-							<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-								Simple, Transparent Pricing
-							</h2>
-							<p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-								Choose the plan that works best for you and your
-								team.
-							</p>
-						</div>
-					</div>
-					<div className="grid grid-cols-1 gap-6 mt-12 md:grid-cols-3">
-						<Card className="border-0 shadow-sm">
-							<CardContent className="p-6">
-								<div className="space-y-4">
-									<h3 className="text-2xl font-bold">Free</h3>
-									<p className="text-gray-500">
-										Perfect for individuals getting started
-									</p>
-									<div className="flex items-baseline">
-										<span className="text-4xl font-bold">
-											$0
-										</span>
-										<span className="ml-1 text-gray-500">
-											/month
-										</span>
-									</div>
-									<ul className="space-y-2 text-gray-500">
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>Up to 10 tasks</span>
-										</li>
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>Basic task management</span>
-										</li>
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>Calendar view</span>
-										</li>
-									</ul>
-									<Button className="w-full" asChild>
-										<Link to="/signup">Get Started</Link>
-									</Button>
-								</div>
-							</CardContent>
-						</Card>
-						<Card className="border-0 shadow-sm relative">
-							<div className="absolute top-0 right-0 rounded-bl-lg rounded-tr-lg bg-primary px-3 py-1 text-sm text-white">
-								Popular
-							</div>
-							<CardContent className="p-6">
-								<div className="space-y-4">
-									<h3 className="text-2xl font-bold">Pro</h3>
-									<p className="text-gray-500">
-										For professionals and small teams
-									</p>
-									<div className="flex items-baseline">
-										<span className="text-4xl font-bold">
-											$12
-										</span>
-										<span className="ml-1 text-gray-500">
-											/month
-										</span>
-									</div>
-									<ul className="space-y-2 text-gray-500">
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>Unlimited tasks</span>
-										</li>
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>
-												Advanced task management
-											</span>
-										</li>
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>
-												Team collaboration (up to 5)
-											</span>
-										</li>
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>Priority support</span>
-										</li>
-									</ul>
-									<Button className="w-full" asChild>
-										<Link to="/signup">
-											Start Free Trial
-										</Link>
-									</Button>
-								</div>
-							</CardContent>
-						</Card>
-						<Card className="border-0 shadow-sm">
-							<CardContent className="p-6">
-								<div className="space-y-4">
-									<h3 className="text-2xl font-bold">
-										Enterprise
-									</h3>
-									<p className="text-gray-500">
-										For large teams and organizations
-									</p>
-									<div className="flex items-baseline">
-										<span className="text-4xl font-bold">
-											$29
-										</span>
-										<span className="ml-1 text-gray-500">
-											/month
-										</span>
-									</div>
-									<ul className="space-y-2 text-gray-500">
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>Everything in Pro</span>
-										</li>
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>Unlimited team members</span>
-										</li>
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>Advanced analytics</span>
-										</li>
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>Dedicated support</span>
-										</li>
-										<li className="flex items-center">
-											<CheckCircle className="mr-2 h-4 w-4 text-primary" />
-											<span>Custom integrations</span>
-										</li>
-									</ul>
-									<Button className="w-full" asChild>
-										<Link to="/contact">
-											Contact Sales
-										</Link>
-									</Button>
-								</div>
-							</CardContent>
-						</Card>
-					</div>
-				</div>
-			</section>
 
 			{/* FAQ Section */}
 			<section className="w-full py-12 md:py-24 lg:py-32">
@@ -615,22 +448,6 @@ export default function Home() {
 								their task management with TaskSync.
 							</p>
 						</div>
-						<div className="flex flex-col gap-2 min-[400px]:flex-row">
-							<Button size="lg" variant="secondary" asChild>
-								<Link to="/signup">Get Started for Free</Link>
-							</Button>
-							<Button
-								size="lg"
-								variant="outline"
-								className="text-white border-white hover:bg-white/10"
-								asChild
-							>
-								<Link to="/demo">
-									Watch Demo{" "}
-									<ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</Button>
-						</div>
 					</div>
 				</div>
 			</section>
@@ -643,7 +460,7 @@ export default function Home() {
 							<h3 className="text-lg font-bold">TaskSync</h3>
 							<p className="text-sm text-gray-500">
 								Simplifying task management for teams and
-								individuals since 2023.
+								individuals since 2025.
 							</p>
 						</div>
 						<div className="space-y-4">
@@ -760,7 +577,7 @@ export default function Home() {
 					</div>
 					<div className="mt-8 border-t pt-8 flex flex-col md:flex-row justify-between items-center">
 						<p className="text-sm text-gray-500">
-							© 2023 TaskSync. All rights reserved.
+							© 2025 TaskSync. All rights reserved.
 						</p>
 						<div className="flex space-x-4 mt-4 md:mt-0">
 							<Link

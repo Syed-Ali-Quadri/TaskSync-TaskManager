@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useEffect } from "react";
 
 // Animation variants for staggered children animations
 const containerVariants = {
@@ -35,6 +36,9 @@ const itemVariants = {
 };
 
 export default function Home() {
+	useEffect(() => {
+		document.title = "TaskSync - Home"
+	}, []);
 	return (
 		<div className="flex flex-col min-h-screen">
 			{/* Hero Section */}

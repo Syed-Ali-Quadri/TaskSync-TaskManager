@@ -21,6 +21,7 @@ import {
 	FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router";
 
 const formSchema = z.object({
 	email: z.string().email({ message: "Please enter a valid email address" }),
@@ -102,12 +103,12 @@ export function SignInForm() {
 			<CardFooter className="flex justify-center">
 				<p className="text-sm text-muted-foreground">
 					Don't have an account?{" "}
-					<a
-						href="/signup"
+					<Link
+						to="/signup"
 						className="text-primary underline-offset-4 hover:underline"
 					>
 						Sign up
-					</a>
+					</Link>
 				</p>
 			</CardFooter>
 		</Card>

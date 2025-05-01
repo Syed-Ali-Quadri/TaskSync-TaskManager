@@ -2,8 +2,12 @@ import { Link } from "react-router";
 import { FileQuestion } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 export default function NotFound() {
+	useEffect(() => {
+		document.title = "TaskSync - Page Not Found";
+	}, []);
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen px-6 py-24 bg-background">
 			<div className="flex flex-col items-center max-w-md text-center">

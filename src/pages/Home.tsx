@@ -1,10 +1,15 @@
 import useStore from "@/store/counter";
+import { useEffect } from "react";
 
 const Home = () => {
 	const count = useStore(state => state.count);
 	const increment = useStore(state => state.increment);
 	const decrement = useStore(state => state.decrement);
 	const reset = useStore(state => state.reset);
+
+	useEffect(() => {
+			document.title = "TaskSync - Home";
+		}, []);
 
 	return (
 		<div>

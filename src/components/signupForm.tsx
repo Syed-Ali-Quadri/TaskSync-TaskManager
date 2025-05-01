@@ -21,6 +21,7 @@ import {
 	FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router";
 
 const formSchema = z.object({
 	name: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -126,12 +127,12 @@ export function SignupForm() {
 			<CardFooter className="flex justify-center">
 				<p className="text-sm text-muted-foreground">
 					Already have an account?{" "}
-					<a
-						href="/signin"
+					<Link
+						to="/signin"
 						className="text-primary underline-offset-4 hover:underline"
 					>
 						Sign in
-					</a>
+					</Link>
 				</p>
 			</CardFooter>
 		</Card>

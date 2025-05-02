@@ -5,12 +5,16 @@ import SignUp from "@/pages/SignUp";
 import CreateTask from "@/pages/CreateTask";
 import EditTask from "@/pages/EditTask";
 import PageNotFound from "@/pages/PageNotFound";
+import ContactPage from "@/pages/Contact";
+import About from "@/pages/About";
 
 const AppRoutes = () => {
 	return (
 		<Routes>
-			<Route path="/" element={<Home />} />
 			<Route path="*" element={<PageNotFound />} />
+			<Route path="/" element={<Home />} />
+			<Route path="/contact" element={<ContactPage />} />
+			<Route path="/about" element={<About />} />
 			<Route path="/signin" element={<SignIn />} />
 			<Route path="/signup" element={<SignUp />} />
 			<Route path="/signup" element={<SignUp />} />

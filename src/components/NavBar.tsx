@@ -20,7 +20,7 @@ export function Navbar() {
 
 	return (
 		<header className="sticky top-0 z-50 w-full border-b bg-background shadow-sm">
-			<div className="container flex h-16 items-center">
+			<div className="container flex h-16 items-center justify-between">
 				{/* Logo - Left Side */}
 				<div className="mr-4 md:flex">
 					<Link to="/" className="flex items-center space-x-2">
@@ -69,7 +69,7 @@ export function Navbar() {
 				</Sheet>
 
 				{/* Desktop Navigation - Center */}
-				<nav className="mx-auto hidden lg:flex">
+				<nav className="hidden lg:flex">
 					<ul className="flex gap-6">
 						{routes.map(route =>
 							<li key={route.href}>
@@ -87,7 +87,7 @@ export function Navbar() {
 				</nav>
 
 				{/* Auth Buttons - Right Side */}
-				<div className="ml-auto pr-2 hidden lg:flex lg:items-center lg:gap-4">
+				<div className="hidden lg:flex lg:items-center lg:gap-4 pr-4">
 					<Button asChild variant="ghost">
 						<Link to="/signin">Sign In</Link>
 					</Button>

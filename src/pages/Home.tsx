@@ -11,7 +11,6 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect } from "react";
 
 // Animation variants for staggered children animations
@@ -310,75 +309,6 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* App Screenshots Section */}
-			<section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-				<div className="container px-4 md:px-6">
-					<motion.div
-						className="flex flex-col items-center justify-center space-y-4 text-center"
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.6 }}
-					>
-						<div className="space-y-2">
-							<div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm">
-								Interface
-							</div>
-							<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-								Beautifully Designed Interface
-							</h2>
-							<p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-								Explore TaskSync's intuitive interface
-								designed to help you manage your time more
-								effectively.
-							</p>
-						</div>
-					</motion.div>
-					<motion.div
-						className="mt-12"
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.8, delay: 0.2 }}
-					>
-						<Tabs defaultValue="monthly" className="w-full">
-							<TabsList className="grid w-full grid-cols-2 mb-8">
-								<TabsTrigger value="monthly">
-									Monthly View
-								</TabsTrigger>
-								<TabsTrigger value="weekly">
-									Weekly View
-								</TabsTrigger>
-							</TabsList>
-							<TabsContent
-								value="monthly"
-								className="flex justify-center"
-							>
-								<div className="relative w-full max-w-3xl h-[400px] md:h-[500px]">
-									<img
-										src="/task-monthly.jpeg"
-										alt="TaskSync Monthly View"
-										className="object-contain rounded-lg border shadow-lg"
-									/>
-								</div>
-							</TabsContent>
-							<TabsContent
-								value="weekly"
-								className="flex justify-center"
-							>
-								<div className="relative w-full max-w-3xl h-[400px] md:h-[500px]">
-									<img
-										src="/task-weekly.jpeg"
-										alt="TaskSync Weekly View"
-										className="object-contain rounded-lg border shadow-lg"
-									/>
-								</div>
-							</TabsContent>
-						</Tabs>
-					</motion.div>
-				</div>
-			</section>
-
 			{/* Testimonials Section */}
 			<section className="w-full py-12 md:py-24 lg:py-32">
 				<div className="container px-4 md:px-6">
@@ -652,14 +582,6 @@ export default function Home() {
 										className="hover:text-primary"
 									>
 										Features
-									</Link>
-								</li>
-								<li>
-									<Link
-										to="/pricing"
-										className="hover:text-primary"
-									>
-										Pricing
 									</Link>
 								</li>
 								<li>

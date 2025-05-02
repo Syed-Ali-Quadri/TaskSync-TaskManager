@@ -13,7 +13,6 @@ export function Navbar() {
 	const routes = [
 		{ href: "/", label: "Home" },
 		{ href: "/about", label: "About Us" },
-		{ href: "/services", label: "Services" },
 		{ href: "/blog", label: "Blog" },
 		{ href: "/contact", label: "Contact Us" },
 	];

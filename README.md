@@ -1,54 +1,60 @@
-# React + TypeScript + Vite
+# TaskSync
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TaskSync is a simple task management application designed to help you organize and synchronize your daily tasks efficiently.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add, edit, and delete tasks.
+- Mark tasks as completed.
+- Synchronize tasks across devices.
+- User-friendly interface.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone the repository:
+  ```bash
+  git clone https://github.com/Syed-Ali-Quadri/TaskSync-TaskManager-Frontend-App
+  ```
+2. Navigate to the project directory:
+  ```bash
+  cd tasksync
+  ```
+3. Install dependencies:
+  ```bash
+  npm install
+  ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Usage
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Start the development server:
+  ```bash
+  npm start
+  ```
+2. Open your browser and navigate to `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Contributing
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+  ```bash
+  git checkout -b feature-name
+  ```
+3. Commit your changes:
+  ```bash
+  git commit -m "Add feature-name"
+  ```
+4. Push to the branch:
+  ```bash
+  git push origin feature-name
+  ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+For questions or feedback, please contact [syedaliquadri100@gmail.com].
